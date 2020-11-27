@@ -1,0 +1,82 @@
+18:13:00.487  INFO [order,,] [11392] [background-preinit][org.hibernate.validator.internal.util.Version:21]: HV000001: Hibernate Validator 6.1.6.Final
+18:13:01.610  INFO [order,,] [11392] [main][org.springframework.boot.SpringApplication:651]: No active profile set, falling back to default profiles: default
+18:13:02.560  INFO [order,,] [11392] [main][org.springframework.data.repository.config.RepositoryConfigurationDelegate:249]: Multiple Spring Data modules found, entering strict repository configuration mode!
+18:13:02.560  INFO [order,,] [11392] [main][org.springframework.data.repository.config.RepositoryConfigurationDelegate:127]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+18:13:02.576  INFO [order,,] [11392] [main][org.springframework.data.repository.config.RepositoryConfigurationDelegate:187]: Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+18:13:02.928  INFO [order,,] [11392] [main][org.springframework.cloud.context.scope.GenericScope:295]: BeanFactory id=7bc76f03-760e-314f-98f5-0d7c99b5c649
+18:13:03.293  INFO [order,,] [11392] [main][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335]: Bean 'spring.sleuth.redis-org.springframework.cloud.sleuth.instrument.redis.TraceRedisProperties' of type [org.springframework.cloud.sleuth.instrument.redis.TraceRedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:13:03.593  WARN [order,,] [11392] [main][io.undertow.websockets.jsr.Bootstrap:68]: UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+18:13:03.643  INFO [order,,] [11392] [main][io.undertow.servlet.spec.ServletContextImpl:364]: Initializing Spring embedded WebApplicationContext
+18:13:03.643  INFO [order,,] [11392] [main][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:285]: Root WebApplicationContext: initialization completed in 2001 ms
+18:13:04.258  WARN [order,,] [11392] [main][org.springframework.context.support.AbstractApplicationContext:559]: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'goodsOrderController': Unsatisfied dependency expressed through field 'orderRiskRelatedApi'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hope.risk.order.OrderRiskRelatedApi' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+18:13:04.273  INFO [order,,] [11392] [main][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136]: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+18:13:04.443 ERROR [order,,] [11392] [main][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40]: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field orderRiskRelatedApi in com.hope.order.controller.trade.GoodsOrderController required a bean of type 'com.hope.risk.order.OrderRiskRelatedApi' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.hope.risk.order.OrderRiskRelatedApi' in your configuration.
+
+18:16:29.370  INFO [order,,] [8644] [background-preinit][org.hibernate.validator.internal.util.Version:21]: HV000001: Hibernate Validator 6.1.6.Final
+18:16:30.525  INFO [order,,] [8644] [main][org.springframework.boot.SpringApplication:651]: No active profile set, falling back to default profiles: default
+18:16:31.452  INFO [order,,] [8644] [main][org.springframework.data.repository.config.RepositoryConfigurationDelegate:249]: Multiple Spring Data modules found, entering strict repository configuration mode!
+18:16:31.452  INFO [order,,] [8644] [main][org.springframework.data.repository.config.RepositoryConfigurationDelegate:127]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+18:16:31.483  INFO [order,,] [8644] [main][org.springframework.data.repository.config.RepositoryConfigurationDelegate:187]: Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+18:16:31.908  INFO [order,,] [8644] [main][org.springframework.cloud.context.scope.GenericScope:295]: BeanFactory id=eb6c74fc-6546-313c-8a21-6565b4d271f6
+18:16:32.287  INFO [order,,] [8644] [main][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:335]: Bean 'spring.sleuth.redis-org.springframework.cloud.sleuth.instrument.redis.TraceRedisProperties' of type [org.springframework.cloud.sleuth.instrument.redis.TraceRedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:16:32.636  WARN [order,,] [8644] [main][io.undertow.websockets.jsr.Bootstrap:68]: UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+18:16:32.668  INFO [order,,] [8644] [main][io.undertow.servlet.spec.ServletContextImpl:364]: Initializing Spring embedded WebApplicationContext
+18:16:32.668  INFO [order,,] [8644] [main][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:285]: Root WebApplicationContext: initialization completed in 2080 ms
+18:16:33.664  WARN [order,,] [8644] [main][com.netflix.config.sources.URLConfigurationSource:121]: No URLs will be polled as dynamic configuration sources.
+18:16:33.664  INFO [order,,] [8644] [main][com.netflix.config.sources.URLConfigurationSource:122]: To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+18:16:33.664  WARN [order,,] [8644] [main][com.netflix.config.sources.URLConfigurationSource:121]: No URLs will be polled as dynamic configuration sources.
+18:16:33.664  INFO [order,,] [8644] [main][com.netflix.config.sources.URLConfigurationSource:122]: To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+18:16:33.994  INFO [order,,] [8644] [main][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181]: Initializing ExecutorService 'applicationTaskExecutor'
+18:16:37.254  INFO [order,,] [8644] [main][org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration:78]: Eureka HTTP Client uses Jersey
+18:16:37.643  WARN [order,,] [8644] [main][org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:108]: You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+18:16:37.955  INFO [order,,] [8644] [main][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:78]: Setting initial instance status as: UP. This may be too early for the instance to advertise itself as available. You would instead want to control this via a healthcheck handler.
+18:16:37.986  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:372]: Initializing Eureka in region us-east-1
+18:16:38.287  INFO [order,,] [8644] [main][com.netflix.discovery.provider.DiscoveryJerseyProvider:70]: Using JSON encoding codec LegacyJacksonJson
+18:16:38.287  INFO [order,,] [8644] [main][com.netflix.discovery.provider.DiscoveryJerseyProvider:71]: Using JSON decoding codec LegacyJacksonJson
+18:16:38.403  INFO [order,,] [8644] [main][com.netflix.discovery.provider.DiscoveryJerseyProvider:80]: Using XML encoding codec XStreamXml
+18:16:38.403  INFO [order,,] [8644] [main][com.netflix.discovery.provider.DiscoveryJerseyProvider:81]: Using XML decoding codec XStreamXml
+18:16:38.557  INFO [order,,] [8644] [main][com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver:43]: Resolving eureka endpoints via configuration
+18:16:38.788  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1007]: Disable delta property : false
+18:16:38.788  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1008]: Single vip registry refresh property : null
+18:16:38.788  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1009]: Force full registry fetch : false
+18:16:38.788  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1010]: Application is null : false
+18:16:38.788  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1011]: Registered Applications size is zero : true
+18:16:38.788  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1013]: Application version is -1: true
+18:16:38.788  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1097]: Getting all instance registry info from the eureka server
+18:16:38.973  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1106]: The response status is 200
+18:16:38.973  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:1321]: Starting heartbeat executor: renew interval is: 5
+18:16:38.973  INFO [order,,] [8644] [main][com.netflix.discovery.InstanceInfoReplicator:60]: InstanceInfoReplicator onDemand update allowed rate per min is 4
+18:16:38.973  INFO [order,,] [8644] [main][com.netflix.discovery.DiscoveryClient:492]: Discovery Client initialized at timestamp 1606472198973 with initial instances count: 4
+18:16:38.989  INFO [order,,] [8644] [main][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41]: Registering application ORDER with eureka with status UP
+18:16:39.015  INFO [order,,] [8644] [main][org.xnio.Xnio:95]: XNIO version 3.8.0.Final
+18:16:39.026  INFO [order,,] [8644] [main][org.xnio.nio.NioXnio:59]: XNIO NIO Implementation Version 3.8.0.Final
+18:16:39.058  INFO [order,,] [8644] [main][org.jboss.threads.Version:52]: JBoss Threads version 3.1.0.Final
+18:16:39.126  INFO [order,,] [8644] [main][io.undertow.Undertow:117]: starting server: Undertow - 2.1.4.Final
+18:16:39.211  INFO [order,,] [8644] [main][org.springframework.boot.web.embedded.undertow.UndertowWebServer:133]: Undertow started on port(s) 8166 (http)
+18:16:39.211  INFO [order,,] [8644] [main][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:145]: Updating port to 8166
+18:16:39.473  INFO [order,,] [8644] [NettyClientSelector_1][org.apache.rocketmq.logging.Slf4jLoggerFactory$Slf4jLogger:95]: closeChannel: close the connection to remote address[] result: true
+18:16:39.473  INFO [order,,] [8644] [NettyClientSelector_1][org.apache.rocketmq.logging.Slf4jLoggerFactory$Slf4jLogger:95]: closeChannel: close the connection to remote address[] result: true
+18:16:39.589  INFO [order,,] [8644] [main][org.springframework.boot.StartupInfoLogger:61]: Started OrderApplication in 10.912 seconds (JVM running for 12.425)
+18:16:44.117  INFO [order,,] [8644] [DiscoveryClient-HeartbeatExecutor-0][com.netflix.discovery.DiscoveryClient:897]: DiscoveryClient_ORDER/${eureka.instance.ip-address}:8166 - Re-registering apps/ORDER
+18:16:44.117  INFO [order,,] [8644] [DiscoveryClient-HeartbeatExecutor-0][com.netflix.discovery.DiscoveryClient:873]: DiscoveryClient_ORDER/${eureka.instance.ip-address}:8166: registering service...
+18:16:44.179  INFO [order,,] [8644] [DiscoveryClient-HeartbeatExecutor-0][com.netflix.discovery.DiscoveryClient:882]: DiscoveryClient_ORDER/${eureka.instance.ip-address}:8166 - registration status: 204
+18:17:08.774  INFO [order,,] [8644] [NettyClientSelector_1][org.apache.rocketmq.logging.Slf4jLoggerFactory$Slf4jLogger:95]: closeChannel: close the connection to remote address[] result: true
+18:17:09.341  INFO [order,,] [8644] [NettyClientSelector_1][org.apache.rocketmq.logging.Slf4jLoggerFactory$Slf4jLogger:95]: closeChannel: close the connection to remote address[] result: true
