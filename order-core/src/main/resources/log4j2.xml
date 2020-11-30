@@ -13,10 +13,16 @@
 		<Property name="LOG_LEVEL_PATTERN">%5p</Property>
 		<Property name="LOG_DATEFORMAT_PATTERN">HH:mm:ss.SSS</Property>
 		<Property name="logFormat">
-			 %d{${LOG_DATEFORMAT_PATTERN}} ${LOG_LEVEL_PATTERN} [${springAppName},%X{X-B3-TraceId},%X{X-B3-SpanId}] [${sys:PID}] [%t][%C:%L]: %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}
+			%d{${LOG_DATEFORMAT_PATTERN}} ${LOG_LEVEL_PATTERN}
+			[${springAppName},%X{X-B3-TraceId},%X{X-B3-SpanId}] [${sys:PID}]
+			[%t][%C:%L]: %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}
 		</Property>
 		<Property name="CONSOLE_LOG_PATTERN">
-			%clr{%d{${LOG_DATEFORMAT_PATTERN}}}{faint} %clr{${LOG_LEVEL_PATTERN}} [${springAppName},%X{X-B3-TraceId},%X{X-B3-SpanId}] %clr{[${sys:PID}]}{magenta} %clr{[%t]}{faint}%clr{[%C:%L]}{cyan}%clr{:}{faint}%m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}
+			%clr{%d{${LOG_DATEFORMAT_PATTERN}}}{faint}
+			%clr{${LOG_LEVEL_PATTERN}}
+			[${springAppName},%X{X-B3-TraceId},%X{X-B3-SpanId}]
+			%clr{[${sys:PID}]}{magenta}
+			%clr{[%t]}{faint}%clr{[%C:%L]}{cyan}%clr{:}{faint}%m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}
 		</Property>
 	</Properties>
 
@@ -94,25 +100,46 @@
 		/> <appender-ref ref="RollingFileInfo" /> <appender-ref ref="RollingFileWarn" 
 		/> <appender-ref ref="RollingFileError" /> </root> </loggers> -->
 
+
 	<loggers>
 		<!--default logger -->
 		<Asyncroot level="info" includeLocation="true">
 			<appender-ref ref="file" />
 		</Asyncroot>
-		<!-- <AsyncLogger name="RocketmqClient" level="error" additivity="false" 
-			includeLocation="true"> <appender-ref ref="file"/> </AsyncLogger> <AsyncLogger 
-			name="RocketmqCommon" level="error" additivity="false" includeLocation="true"> 
-			<appender-ref ref="file"/> </AsyncLogger> <AsyncLogger name="com.hopegaming.pocket" 
-			level="info" additivity="false" includeLocation="true"> <appender-ref ref="file"/> 
-			</AsyncLogger> <AsyncLogger name="RocketmqRemoting" level="error" additivity="false" 
-			includeLocation="true"> <appender-ref ref="file"/> </AsyncLogger> <AsyncLogger 
-			name="com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl" level="error" 
-			additivity="false" includeLocation="true"> <appender-ref ref="file"/> </AsyncLogger> 
-			测试用日志，查看sql语句以及是否处于事务内 <AsyncLogger name="com.hopegaming.pocket.dal.db.dao" 
-			level="info" additivity="false" includeLocation="true"> <appender-ref ref="console"/> 
-			<appender-ref ref="file"/> </AsyncLogger> <AsyncLogger name="org.mybatis" 
-			level="info" additivity="false" includeLocation="true"> <appender-ref ref="console"/> 
-			<appender-ref ref="file"/> </AsyncLogger> -->
+		<AsyncLogger name="RocketmqClient" level="error"
+			additivity="false" includeLocation="true">
+			<appender-ref ref="file" />
+		</AsyncLogger>
+		<AsyncLogger name="RocketmqCommon" level="error"
+			additivity="false" includeLocation="true">
+			<appender-ref ref="file" />
+		</AsyncLogger>
+		<AsyncLogger name="com.hopegaming.pocket" level="info"
+			additivity="false" includeLocation="true">
+			<appender-ref ref="file" />
+		</AsyncLogger>
+		<AsyncLogger name="RocketmqRemoting" level="error"
+			additivity="false" includeLocation="true">
+			<appender-ref ref="file" />
+		</AsyncLogger>
+		
+		<AsyncLogger
+			name="com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl"
+			level="error" additivity="false" includeLocation="true">
+			<appender-ref ref="file" />
+		</AsyncLogger>
+		
+		测试用日志，查看sql语句以及是否处于事务内
+		<AsyncLogger name="com.hopegaming.pocket.dal.db.dao"
+			level="info" additivity="false" includeLocation="true">
+			<appender-ref ref="console" />
+			<appender-ref ref="file" />
+		</AsyncLogger>
+		<AsyncLogger name="org.mybatis" level="info"
+			additivity="false" includeLocation="true">
+			<appender-ref ref="console" />
+			<appender-ref ref="file" />
+		</AsyncLogger>
 
 	</loggers>
 
